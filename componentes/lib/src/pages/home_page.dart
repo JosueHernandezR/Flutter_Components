@@ -1,3 +1,4 @@
+import 'package:componentes/src/providers/menu_provider.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,6 +15,8 @@ class HomePage extends StatelessWidget {
 
   Widget _lista() {
 
+    print(menuProvider.cargarData);
+
     return ListView(
       children: _listaItems(),
     );
@@ -28,7 +31,7 @@ class HomePage extends StatelessWidget {
       ListTile( title: Text('Hola mundo'),),
       Divider(),
       ListTile( title: Text('Hola mundo'),),
-      Divider(),
+      Divider(), 
 
     ];
 
