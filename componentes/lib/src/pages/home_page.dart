@@ -54,14 +54,16 @@ class HomePage extends StatelessWidget {
         onTap: () {
 
 
-          //Crear navegación normal
-          final route = MaterialPageRoute(
+          //Crear navegación secundaria o a un solo lugar
+          //final route = MaterialPageRoute(
             //Se pueden enviar distintos tipos de argumentos
-            builder: ( context ) => AlertPage()
-          );
+            //builder: ( context ) => AlertPage()
+          //);
 
           //Pone una nueva pantalla encima
-          Navigator.push( context, route );
+          Navigator.pushNamed( context, opt['ruta'] );
+
+
         },
       );
 

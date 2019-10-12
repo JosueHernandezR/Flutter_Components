@@ -1,3 +1,5 @@
+import 'package:componentes/src/pages/alert_page.dart';
+import 'package:componentes/src/pages/avatar_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,7 +14,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      // jombe: HomePage(),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder> {
+        '/'       : ( BuildContext context ) => HomePage(),
+        'alert'   : ( BuildContext context ) => AlertPage(),
+        'avatar'  : ( BuildContext context ) => AvatarPage(),
+      },
     );
   }
 }
