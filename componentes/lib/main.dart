@@ -1,10 +1,10 @@
-import 'package:componentes/src/pages/alert_page.dart';
-import 'package:componentes/src/pages/avatar_page.dart';
+
 import 'package:flutter/material.dart';
 
 
-import 'package:componentes/src/pages/home_page.dart';
-//import 'package:componentes/src/pages/home_temp.dart';
+import 'package:componentes/src/routes/routes.dart';
+import 'package:componentes/src/pages/alert_page.dart';
+
  
 void main() => runApp(MyApp());
  
@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // jombe: HomePage(),
       initialRoute: '/',
-      routes: <String, WidgetBuilder> {
-        '/'       : ( BuildContext context ) => HomePage(),
-        'alert'   : ( BuildContext context ) => AlertPage(),
-        'avatar'  : ( BuildContext context ) => AvatarPage(),
+      routes: getApplicationRoutes(),
+      onGenerateRoute: ( settings ){
+        return MaterialPageRoute(
+          builder: (BuildContext context ) => AlertPage()
+        );
       },
     );
   }
