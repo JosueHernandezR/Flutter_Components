@@ -14,6 +14,24 @@ class CardPage extends StatelessWidget {
           _cardTipo1(),
           SizedBox(height: 30.0,),
           _cardTipo2(),
+          SizedBox(height: 30.0,),
+          _cardTipo1(),
+          SizedBox(height: 30.0,),
+          _cardTipo2(),
+          SizedBox(height: 30.0,),
+          _cardTipo1(),
+          SizedBox(height: 30.0,),
+          _cardTipo2(),
+          SizedBox(height: 30.0,),
+          _cardTipo1(),
+          SizedBox(height: 30.0,),
+          _cardTipo2(),
+          SizedBox(height: 30.0,),
+          _cardTipo1(),
+          SizedBox(height: 30.0,),
+          _cardTipo2(),
+          SizedBox(height: 30.0,),
+          
         ],
       ),
     );
@@ -22,6 +40,8 @@ class CardPage extends StatelessWidget {
   Widget _cardTipo1() {
 
      return Card(
+       elevation: 10.0,
+       shape: RoundedRectangleBorder( borderRadius: BorderRadius.circular(20.0) ),
        child: Column(
          children: <Widget>[
            ListTile(
@@ -50,7 +70,8 @@ class CardPage extends StatelessWidget {
 
   Widget _cardTipo2() {
 
-    return Card(
+    final card =  Container(
+      //clipBehavior: Clip.antiAlias,
       child: Column(
         children: <Widget>[
           FadeInImage(
@@ -67,6 +88,25 @@ class CardPage extends StatelessWidget {
             padding: EdgeInsets.all(10.0),
             child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra aliquam tortor, a convallis justo convallis eu. Nulla quam quam, consectetur ut ultrices eget, malesuada et sem.')),
         ],
+      ),
+    );
+
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30.0),
+        color: Colors.white,
+        boxShadow: <BoxShadow> [
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10.0,
+            spreadRadius: 2.0,
+            offset: Offset(0.0, 0.0),
+          )
+        ]
+      ),
+      child: ClipRRect(
+        child: card,
+        borderRadius: BorderRadius.circular(30.0),
       ),
     );
 
