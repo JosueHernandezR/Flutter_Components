@@ -6,6 +6,7 @@ import 'package:componentes/src/pages/home_page.dart';
 import 'package:componentes/src/pages/card_page.dart';
 import 'package:componentes/src/pages/animated_container.dart';
 import 'package:componentes/src/pages/input_page.dart';
+import 'package:componentes/src/pages/slider_page.dart';
 
 
 //import 'package:componentes/src/pages/home_temp.dart';
@@ -20,6 +21,6 @@ Map<String, WidgetBuilder> getApplicationRoutes(){
         'card'    : ( BuildContext context ) => CardPage(),
         'animatedContainer' : ( BuildContext content ) => AnimatedContainerPage(),
         'inputs'  : ( BuildContext content ) => InputPage(),
-
+        'slider'  : ( BuildContext content ) => SliderPage(),
       };
 }
